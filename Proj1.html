@@ -13,10 +13,10 @@
             overflow-x: hidden;
         }
         h1 {
-            color: #000; /* Black for the main heading */
+            color: #000; 
         }
         h2, h3 {
-            color: #333; /* Default text color for subheadings */
+            color: #333;
         }
         p {
             line-height: 1.6;
@@ -24,28 +24,28 @@
         }
         .section {
             padding: 15px;
-            border-left: 5px solid; /* Color will vary by section */
+            border-left: 5px solid; 
             margin-bottom: 20px;
             border-radius: 5px;
         }
-        /* Color themes for each section */
+    
         #html {
-            background-color: #e0f7fa; /* Light cyan */
-            border-color: #00acc1; /* Dark cyan */
-            color: #00acc1; /* Text color matching the border */
+            background-color: #e0f7fa;
+            border-color: #00acc1;
+            color: #00acc1;
         }
         #css {
-            background-color: #e3f2fd; /* Light blue */
-            border-color: #1e88e5; /* Blue */
-            color: #1e88e5; /* Text color matching the border */
+            background-color: #e3f2fd;
+            border-color: #1e88e5;
+            color: #1e88e5;
         }
         #js {
-            background-color: #ffebee; /* Light red */
-            border-color: #c62828; /* Dark red */
-            color: #c62828; /* Text color matching the border */
+            background-color: #ffebee;
+            border-color: #c62828;
+            color: #c62828;
         }
         #scroll-container {
-            width: 200%; /* Ensure enough scrollable width */
+            width: 200%;
             height: 100px;
             background-color: transparent;
         }
@@ -66,14 +66,14 @@
         <p><strong>Purpose:</strong> HTML is the backbone of a webpage, defining its structure and content. It uses elements, represented by tags, to organize text, images, links, and multimedia.</p>
         <p><strong>Common Elements:</strong></p>
         <ul>
-            <li><strong>Headings (`&lt;h1&gt;` to `&lt;h6&gt;`):</strong> Define the hierarchical structure of content.</li>
-            <li><strong>Paragraphs (`&lt;p&gt;`):</strong> Enclose blocks of text.</li>
-            <li><strong>Links (`&lt;a&gt;`):</strong> Create hyperlinks, using the `href` attribute to specify the target URL.</li>
-            <li><strong>Images (`&lt;img&gt;`):</strong> Embed images using the `src` attribute to link to the image file and `alt` attribute to provide alternative text for accessibility.</li>
-            <li><strong>Lists (`&lt;ul&gt;`, `&lt;ol&gt;`, `&lt;li&gt;`):</strong> Organize items in unordered (`&lt;ul&gt;`) or ordered (`&lt;ol&gt;`) lists, with each item enclosed in an `&lt;li&gt;` tag.</li>
+            <li><strong>Headings (&lt;h1&gt; to &lt;h6&gt;):</strong> Define the hierarchical structure of content.</li>
+            <li><strong>Paragraphs (&lt;p&gt;):</strong> Enclose blocks of text.</li>
+            <li><strong>Links (&lt;a&gt;):</strong> Create hyperlinks, using the href attribute to specify the target URL.</li>
+            <li><strong>Images (&lt;img&gt;):</strong> Embed images using the src attribute to link to the image file and alt attribute to provide alternative text for accessibility.</li>
+            <li><strong>Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;):</strong> Organize items in unordered (&lt;ul&gt;) or ordered (&lt;ol&gt;) lists, with each item enclosed in an &lt;li&gt; tag.</li>
         </ul>
-        <p><strong>Semantic Elements:</strong> Use `&lt;header&gt;`, `&lt;footer&gt;`, `&lt;nav&gt;`, `&lt;article&gt;`, and `&lt;section&gt;` to give meaning to different parts of a webpage.</p>
-        <p><strong>Forms:</strong> Use input elements like `&lt;input&gt;`, `&lt;textarea&gt;`, and `&lt;select&gt;` to collect user input, and handle form submissions with the `action` and `method` attributes.</p>
+        <p><strong>Semantic Elements:</strong> Use &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, and &lt;section&gt; to give meaning to different parts of a webpage.</p>
+        <p><strong>Forms:</strong> Use input elements like &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; to collect user input, and handle form submissions with the action and method attributes.</p>
     </div>
 
     <div id="css" class="section">
@@ -87,7 +87,7 @@
             <li><strong>Pseudo-Classes and Pseudo-Elements:</strong> Style elements based on their state or specific parts of elements.</li>
         </ul>
         <p><strong>Box Model:</strong> The box model includes content, padding, border, and margin, defining the space around an element.</p>
-        <p><strong>Layout Techniques:</strong> Use Flexbox and Grid for layout, and positioning properties like `static`, `relative`, `absolute`, and `fixed` to control element placement.</p>
+        <p><strong>Layout Techniques:</strong> Use Flexbox and Grid for layout, and positioning properties like static, relative, absolute, and fixed to control element placement.</p>
         <p><strong>Responsive Design:</strong> Implement responsive design with media queries and the viewport meta tag.</p>
     </div>
 
@@ -101,14 +101,11 @@
         <p><strong>Control Structures:</strong> JavaScript includes conditionals (if, else if, else) and loops (for, while, do...while) to control the flow of the program.</p>
     </div>
 
-    <div id="scroll-container">
-        <!-- Ensures enough scrollable space -->
-    </div>
+    <div id="scroll-container"></div>
 
     <img id="cat" src="https://st4.depositphotos.com/11953928/24485/v/450/depositphotos_244857936-stock-illustration-line-happy-cat-head-cute.jpg" alt="Cat">
 
     <script>
-        // JavaScript to move the cat when the user scrolls
         window.addEventListener('scroll', function() {
             const cat = document.getElementById('cat');
             const scrollPosition = window.scrollY;
