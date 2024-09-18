@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        h1 {
+            color: #000; /* Black for the main heading */
+        }
+        h2, h3 {
+            color: #333; /* Default text color for subheadings */
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .section {
+            padding: 15px;
+            border-left: 5px solid; /* Color will vary by section */
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        /* Color themes for each section */
+        #html {
+            background-color: #e0f7fa; /* Light cyan */
+            border-color: #00acc1; /* Dark cyan */
+            color: #00acc1; /* Text color matching the border */
+        }
+        #css {
+            background-color: #e3f2fd; /* Light blue */
+            border-color: #1e88e5; /* Blue */
+            color: #1e88e5; /* Text color matching the border */
+        }
+        #js {
+            background-color: #ffebee; /* Light red */
+            border-color: #c62828; /* Dark red */
+            color: #c62828; /* Text color matching the border */
+        }
+        #scroll-container {
+            width: 200%; /* Ensure enough scrollable width */
+            height: 100px;
+            background-color: transparent;
+        }
+        #cat {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 100px;
+            transition: transform 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Development Overview</h1>
+
+    <div id="html" class="section">
+        <h2>1. HTML (Hypertext Markup Language)</h2>
+        <p><strong>Purpose:</strong> HTML is the backbone of a webpage, defining its structure and content. It uses elements, represented by tags, to organize text, images, links, and multimedia.</p>
+        <p><strong>Common Elements:</strong></p>
+        <ul>
+            <li><strong>Headings (`&lt;h1&gt;` to `&lt;h6&gt;`):</strong> Define the hierarchical structure of content.</li>
+            <li><strong>Paragraphs (`&lt;p&gt;`):</strong> Enclose blocks of text.</li>
+            <li><strong>Links (`&lt;a&gt;`):</strong> Create hyperlinks, using the `href` attribute to specify the target URL.</li>
+            <li><strong>Images (`&lt;img&gt;`):</strong> Embed images using the `src` attribute to link to the image file and `alt` attribute to provide alternative text for accessibility.</li>
+            <li><strong>Lists (`&lt;ul&gt;`, `&lt;ol&gt;`, `&lt;li&gt;`):</strong> Organize items in unordered (`&lt;ul&gt;`) or ordered (`&lt;ol&gt;`) lists, with each item enclosed in an `&lt;li&gt;` tag.</li>
+        </ul>
+        <p><strong>Semantic Elements:</strong> Use `&lt;header&gt;`, `&lt;footer&gt;`, `&lt;nav&gt;`, `&lt;article&gt;`, and `&lt;section&gt;` to give meaning to different parts of a webpage.</p>
+        <p><strong>Forms:</strong> Use input elements like `&lt;input&gt;`, `&lt;textarea&gt;`, and `&lt;select&gt;` to collect user input, and handle form submissions with the `action` and `method` attributes.</p>
+    </div>
+
+    <div id="css" class="section">
+        <h2>2. CSS (Cascading Style Sheets)</h2>
+        <p><strong>Purpose:</strong> CSS controls the visual presentation of a webpage, affecting layout, colors, fonts, and overall look.</p>
+        <p><strong>Selectors:</strong></p>
+        <ul>
+            <li><strong>Element Selector:</strong> Targets all instances of a specific HTML element.</li>
+            <li><strong>Class Selector:</strong> Targets elements with a specific class attribute.</li>
+            <li><strong>ID Selector:</strong> Targets a single element with a specific ID attribute.</li>
+            <li><strong>Pseudo-Classes and Pseudo-Elements:</strong> Style elements based on their state or specific parts of elements.</li>
+        </ul>
+        <p><strong>Box Model:</strong> The box model includes content, padding, border, and margin, defining the space around an element.</p>
+        <p><strong>Layout Techniques:</strong> Use Flexbox and Grid for layout, and positioning properties like `static`, `relative`, `absolute`, and `fixed` to control element placement.</p>
+        <p><strong>Responsive Design:</strong> Implement responsive design with media queries and the viewport meta tag.</p>
+    </div>
+
+    <div id="js" class="section">
+        <h2>3. JavaScript (JS)</h2>
+        <p><strong>Purpose:</strong> JavaScript adds interactivity and dynamic content to webpages, allowing manipulation of HTML and CSS, handling events, and communicating with servers.</p>
+        <p><strong>Variables and Data Types:</strong> JavaScript uses variables to store data, with types like numbers, strings, booleans, arrays, objects, and functions.</p>
+        <p><strong>Functions:</strong> Functions are reusable blocks of code, which can be declared, passed as arguments, or immediately invoked.</p>
+        <p><strong>DOM Manipulation:</strong> JavaScript can select and manipulate HTML elements, change content, and modify styles using the Document Object Model (DOM).</p>
+        <p><strong>Event Handling:</strong> Events like clicks, keypresses, and form submissions are handled with event listeners in JavaScript.</p>
+        <p><strong>Control Structures:</strong> JavaScript includes conditionals (if, else if, else) and loops (for, while, do...while) to control the flow of the program.</p>
+    </div>
+
+    <div id="scroll-container">
+        <!-- Ensures enough scrollable space -->
+    </div>
+
+    <img id="cat" src="https://st4.depositphotos.com/11953928/24485/v/450/depositphotos_244857936-stock-illustration-line-happy-cat-head-cute.jpg" alt="Cat">
+
+    <script>
+        // JavaScript to move the cat when the user scrolls
+        window.addEventListener('scroll', function() {
+            const cat = document.getElementById('cat');
+            const scrollPosition = window.scrollY;
+            const maxScroll = document.body.scrollWidth - window.innerWidth;
+            const catPosition = (scrollPosition / maxScroll) * (window.innerWidth - cat.offsetWidth);
+            cat.style.transform = `translateX(${catPosition}px)`;
+        });
+    </script>
+</body>
+</html>
